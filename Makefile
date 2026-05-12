@@ -3,6 +3,7 @@ PREPROCESSING = src/image_preprocessor.py
 VECTORING = src/vectoring.py
 TRAINING_SET = src/generate_csv.py
 TESTING_SET = src/testing_set.py
+ALGORITHM_TUNING = src/algorithm_testing.py
 
 image_preprocessing:
 	$(PYTHON) $(PREPROCESSING)
@@ -16,5 +17,10 @@ trainig_set:
 testing_set:
 	$(PYTHON) $(TESTING_SET)
 
+algorithm_tuning:
+	$(PYTHON) $(ALGORITHM_TUNING)
+
+full_process: image_preprocessing vectoring trainig_set testing_set algorithm_tuning
+
 clean:
-	rm -rf resized_images image_vectors training_set testing_set
+	rm -rf resized_images image_vectors training_set testing_set models
