@@ -20,7 +20,7 @@ for input_dir, output_dir in directories:
         img = Image.open(img_path).convert("L")
         pixels = np.array(img)
 
-        binary = np.where(pixels < 128, 1, 0)
+        binary = np.where(pixels < 128, 0, 1)
 
         output_file = output_dir / (img_path.stem + ".txt")
 
