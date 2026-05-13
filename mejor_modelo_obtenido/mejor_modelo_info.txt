@@ -1,0 +1,26 @@
+================================================================================
+INFORMACIÓN DEL MEJOR MODELO
+================================================================================
+
+Modelo: SVM
+Accuracy (Validación Cruzada): 0.8345
+Parámetros: {'C': 10, 'kernel': 'rbf'}
+
+Archivo del modelo: C20739_Caleb_Arias.joblib
+Archivo del scaler: scaler.joblib
+
+================================================================================
+INSTRUCCIONES PARA INFERENCIA:
+================================================================================
+
+Para cargar y usar este modelo:
+
+from joblib import load
+
+# Cargar modelo y scaler
+modelo = load('mejor_modelo_obtenido/C20739_Caleb_Arias.joblib')
+scaler = load('mejor_modelo_obtenido/scaler.joblib')
+
+# Escalar datos antes de predecir
+X_new_scaled = scaler.transform(X_new)
+predicciones = modelo.predict(X_new_scaled)

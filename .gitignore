@@ -4,3 +4,4 @@ image_vectors/
 training_set/
 testing_set/
 models/
+inferencia.csv

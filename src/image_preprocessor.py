@@ -23,7 +23,6 @@ for input_dir, output_dir in directories:
         img_array = np.array(img, dtype=np.float32)
         current_mean = np.mean(img_array)
 
-        # Avoid division by zero
         if current_mean > 0:
             brightness_factor = TARGET_MEAN / current_mean
             brightness_factor = max(0.5, min(brightness_factor, 2.0))

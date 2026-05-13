@@ -16,16 +16,11 @@ for input_dir, output_dir in directories:
     os.makedirs(output_dir, exist_ok=True)
 
     for img_path in input_dir.glob("*"):
-
         img = Image.open(img_path).convert("L")
         pixels = np.array(img)
-
         binary = np.where(pixels < 128, 0, 1)
-
         output_file = output_dir / (img_path.stem + ".txt")
-
         with open(output_file, "w") as f:
             for row in binary:
                 f.write("".join(map(str, row)) + "\n")
-
         print(f"Processed: {img_path.name}")

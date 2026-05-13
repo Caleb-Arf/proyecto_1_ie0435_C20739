@@ -12,11 +12,8 @@ for input_csv, test_csv in directories:
 
     with open(input_csv, 'r') as infile:
         rows = list(csv.reader(infile))
-
     test_indices = list(range(0, len(rows), 14))[:15]
-
     test_rows = [rows[i] for i in test_indices]
-
     remaining_rows = [
         row for i, row in enumerate(rows)
         if i not in test_indices

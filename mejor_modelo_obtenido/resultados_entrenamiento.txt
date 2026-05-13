@@ -1,0 +1,43 @@
+================================================================================
+RESUMEN DE EVALUACIÓN FINAL - VALIDACIÓN CRUZADA
+================================================================================
+
+Dataset: 16384 características
+Muestras de entrenamiento: 417
+  - Negativas: 210
+  - Positivas: 207
+
+================================================================================
+
+      Modelo CV_Accuracy_str                       Mejores_Parametros CV_Std
+         SVM          0.8345               {'C': 10, 'kernel': 'rbf'}    N/A
+RandomForest          0.8106   {'max_depth': 10, 'n_estimators': 200}    N/A
+         KNN          0.7602 {'n_neighbors': 3, 'weights': 'uniform'}    N/A
+DecisionTree          0.6477   {'criterion': 'gini', 'max_depth': 10}    N/A
+  NaiveBayes          0.5781                N/A (sin hiperparámetros) 0.0372
+
+================================================================================
+DETALLES POR MODELO:
+================================================================================
+
+1. SVM
+   Accuracy CV: 0.8345
+   Parámetros: {'C': 10, 'kernel': 'rbf'}
+
+2. RandomForest
+   Accuracy CV: 0.8106
+   Parámetros: {'max_depth': 10, 'n_estimators': 200}
+
+3. KNN
+   Accuracy CV: 0.7602
+   Parámetros: {'n_neighbors': 3, 'weights': 'uniform'}
+
+4. DecisionTree
+   Accuracy CV: 0.6477
+   Parámetros: {'criterion': 'gini', 'max_depth': 10}
+
+5. NaiveBayes
+   Accuracy CV: 0.5781
+   Parámetros: N/A (sin hiperparámetros)
+   Desviación estándar: 0.0372
+
